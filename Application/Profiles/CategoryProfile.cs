@@ -12,6 +12,8 @@ namespace Application.Profiles {
         public CategoryProfile() {
             CreateMap<Category, CategoryDto>()
                 .ForMember(des => des.Id, opt => opt.MapFrom(src => src.Id));
+            CreateMap<CreateCategoryRequestDto, Category>();
+            CreateMap<UpdateCategoryRequestDto, Category>();
         }
     }
 }
